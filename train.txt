@@ -1,0 +1,339 @@
+nohup: ignoring input
+PREFIX:  llaga-vicuna-7b-simteg-2-10-linear-projector
+W&B offline. Running your script from this directory will only write metadata locally. Use wandb disabled to completely turn off W&B.
+deepspeed --include localhost:3,4 --master_port 61000 train/train_mem.py --deepspeed ./scripts/zero2.json --model_name_or_path /root/autodl-tmp/lht/lmsys/vicuna-7b-v1.5-16k --version v1 --cache_dir ../../checkpoint --pretrained_embedding_type simteg --tune_mm_mlp_adapter True --mm_use_graph_start_end False --mm_use_graph_patch_token False --bf16 True --output_dir ./checkpoints/pubmed-cora/llaga-vicuna-7b-simteg-2-10-linear-projector_nd --num_train_epochs 1 --per_device_train_batch_size 4 --per_device_eval_batch_size 4 --gradient_accumulation_steps 1 --evaluation_strategy no --save_strategy epoch --learning_rate 2e-3 --weight_decay 0. --warmup_ratio 0.03 --lr_scheduler_type cosine --logging_steps 1 --tf32 True --model_max_length 4096 --gradient_checkpointing True --lazy_preprocess True --report_to wandb --use_hop 2 --sample_neighbor_size 10 --mm_projector_type linear --use_task nd --use_dataset pubmed-cora --template ND
+[2024-04-19 16:40:39,054] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-04-19 16:40:41,107] [WARNING] [runner.py:203:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-04-19 16:40:41,159] [INFO] [runner.py:570:main] cmd = /root/miniconda3/envs/llaga/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMSwgMiwgMywgNF19 --master_addr=127.0.0.1 --master_port=61000 --enable_each_rank_log=None train/train_mem.py --deepspeed ./scripts/zero2.json --model_name_or_path /root/autodl-tmp/lht/lmsys/vicuna-7b-v1.5-16k --version v1 --cache_dir ../../checkpoint --pretrained_embedding_type simteg --tune_mm_mlp_adapter True --mm_use_graph_start_end False --mm_use_graph_patch_token False --bf16 True --output_dir ./checkpoints/pubmed-cora/llaga-vicuna-7b-simteg-2-10-linear-projector_nd --num_train_epochs 1 --per_device_train_batch_size 4 --per_device_eval_batch_size 4 --gradient_accumulation_steps 1 --evaluation_strategy no --save_strategy epoch --learning_rate 2e-3 --weight_decay 0. --warmup_ratio 0.03 --lr_scheduler_type cosine --logging_steps 1 --tf32 True --model_max_length 4096 --gradient_checkpointing True --lazy_preprocess True --report_to wandb --use_hop 2 --sample_neighbor_size 10 --mm_projector_type linear --use_task nd --use_dataset pubmed-cora --template ND
+[2024-04-19 16:40:42,689] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-04-19 16:40:43,984] [INFO] [launch.py:138:main] 0 NCCL_P2P_DISABLE=1
+[2024-04-19 16:40:43,984] [INFO] [launch.py:138:main] 0 NCCL_IB_DISABLE=1
+[2024-04-19 16:40:43,984] [INFO] [launch.py:145:main] WORLD INFO DICT: {'localhost': [1, 2, 3, 4]}
+[2024-04-19 16:40:43,984] [INFO] [launch.py:151:main] nnodes=1, num_local_procs=4, node_rank=0
+[2024-04-19 16:40:43,984] [INFO] [launch.py:162:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1, 2, 3]})
+[2024-04-19 16:40:43,984] [INFO] [launch.py:163:main] dist_world_size=4
+[2024-04-19 16:40:43,984] [INFO] [launch.py:165:main] Setting CUDA_VISIBLE_DEVICES=1,2,3,4
+[2024-04-19 16:40:47,296] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-04-19 16:40:47,529] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-04-19 16:40:47,529] [INFO] [comm.py:668:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2024-04-19 16:40:47,993] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-04-19 16:40:48,172] [INFO] [comm.py:637:init_distributed] cdb=None
+[2024-04-19 16:40:48,276] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-04-19 16:40:48,442] [INFO] [comm.py:637:init_distributed] cdb=None
+./checkpoints/pubmed-cora/llaga-vicuna-7b-simteg-2-10-linear-projector_nd already exists!!!!
+mm_hidden_size: 2543
+You are using a model of type llama to instantiate a model of type llaga. This is not supported for all configurations of models and can yield errors.
+./checkpoints/pubmed-cora/llaga-vicuna-7b-simteg-2-10-linear-projector_nd already exists!!!!
+mm_hidden_size: 2543
+You are using a model of type llama to instantiate a model of type llaga. This is not supported for all configurations of models and can yield errors.
+[2024-04-19 16:40:48,714] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-04-19 16:40:48,984] [INFO] [comm.py:637:init_distributed] cdb=None
+./checkpoints/pubmed-cora/llaga-vicuna-7b-simteg-2-10-linear-projector_nd already exists!!!!
+mm_hidden_size: 2543
+You are using a model of type llama to instantiate a model of type llaga. This is not supported for all configurations of models and can yield errors.
+./checkpoints/pubmed-cora/llaga-vicuna-7b-simteg-2-10-linear-projector_nd already exists!!!!
+mm_hidden_size: 2543
+You are using a model of type llama to instantiate a model of type llaga. This is not supported for all configurations of models and can yield errors.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:12<00:12, 12.71s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:18<00:00,  8.44s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:18<00:00,  9.08s/it]
+Some weights of LlagaLlamaForCausalLM were not initialized from the model checkpoint at /root/autodl-tmp/lht/lmsys/vicuna-7b-v1.5-16k and are newly initialized: ['model.gat_w.weight', 'model.gat_w.bias', 'model.gat_a.weight', 'model.gat_a.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards:  50%|█████     | 1/2 [00:16<00:16, 16.97s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:16<00:16, 16.73s/it]无标题信息的数量为： 1
+总共数量为： 11830
+无标题信息的数量为： 24
+总共数量为： 1624
+Loading checkpoint shards:  50%|█████     | 1/2 [00:15<00:15, 15.79s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:24<00:00, 11.29s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:24<00:00, 12.10s/it]
+Some weights of LlagaLlamaForCausalLM were not initialized from the model checkpoint at /root/autodl-tmp/lht/lmsys/vicuna-7b-v1.5-16k and are newly initialized: ['model.gat_w.bias', 'model.gat_w.weight', 'model.gat_a.bias', 'model.gat_a.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Loading checkpoint shards: 100%|██████████| 2/2 [00:24<00:00, 11.47s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:24<00:00, 12.29s/it]
+Some weights of LlagaLlamaForCausalLM were not initialized from the model checkpoint at /root/autodl-tmp/lht/lmsys/vicuna-7b-v1.5-16k and are newly initialized: ['model.gat_w.weight', 'model.gat_w.bias', 'model.gat_a.weight', 'model.gat_a.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+无标题信息的数量为： 1
+总共数量为： 11830
+无标题信息的数量为： 1
+总共数量为： 11830
+无标题信息的数量为： 24
+总共数量为： 1624
+无标题信息的数量为： 24
+总共数量为： 1624
+Loading checkpoint shards: 100%|██████████| 2/2 [00:24<00:00, 11.34s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:24<00:00, 12.01s/it]
+Some weights of LlagaLlamaForCausalLM were not initialized from the model checkpoint at /root/autodl-tmp/lht/lmsys/vicuna-7b-v1.5-16k and are newly initialized: ['model.gat_a.bias', 'model.gat_w.bias', 'model.gat_w.weight', 'model.gat_a.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+无标题信息的数量为： 1
+总共数量为： 11830
+Dataset pubmed Task nd, size 11829
+无标题信息的数量为： 24
+总共数量为： 1624
+Dataset cora Task nd, size 1600
+Formatting inputs...Skip in lazy mode, size 13429
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+Traceback (most recent call last):
+  File "/root/lht/LLaGA/train/train_mem.py", line 16, in <module>
+    _train()
+  File "/root/lht/LLaGA/train/train.py", line 1130, in _train
+    trainer.train()
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/transformers/trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/transformers/trainer.py", line 1656, in _inner_training_loop
+    model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/accelerate/accelerator.py", line 1255, in prepare
+    result = self._prepare_deepspeed(*args)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/accelerate/accelerator.py", line 1640, in _prepare_deepspeed
+    engine, optimizer, _, lr_scheduler = deepspeed.initialize(**kwargs)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/__init__.py", line 171, in initialize
+    engine = DeepSpeedEngine(args=args,
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 262, in __init__
+    self._configure_distributed_model(model)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1077, in _configure_distributed_model
+    self.module.to(self.device)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/transformers/modeling_utils.py", line 1900, in to
+    return super().to(*args, **kwargs)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1152, in to
+    return self._apply(convert)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/nn/modules/module.py", line 802, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/nn/modules/module.py", line 802, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/nn/modules/module.py", line 802, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/nn/modules/module.py", line 825, in _apply
+    param_applied = fn(param)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1150, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 86.00 MiB. GPU 0 has a total capacity of 23.65 GiB of which 60.50 MiB is free. Process 968794 has 14.41 GiB memory in use. Process 976078 has 9.17 GiB memory in use. Of the allocated memory 8.79 GiB is allocated by PyTorch, and 1.65 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/root/lht/LLaGA/train/train_mem.py", line 16, in <module>
+    _train()
+  File "/root/lht/LLaGA/train/train.py", line 1130, in _train
+    trainer.train()
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/transformers/trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/transformers/trainer.py", line 1656, in _inner_training_loop
+    model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/accelerate/accelerator.py", line 1255, in prepare
+    result = self._prepare_deepspeed(*args)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/accelerate/accelerator.py", line 1640, in _prepare_deepspeed
+    engine, optimizer, _, lr_scheduler = deepspeed.initialize(**kwargs)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/__init__.py", line 171, in initialize
+    engine = DeepSpeedEngine(args=args,
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 262, in __init__
+    self._configure_distributed_model(model)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1119, in _configure_distributed_model
+    self._broadcast_model()
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1042, in _broadcast_model
+    dist.broadcast(p, groups._get_broadcast_src_rank(), group=self.seq_data_parallel_group)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/comm/comm.py", line 117, in log_wrapper
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/comm/comm.py", line 224, in broadcast
+    return cdb.broadcast(tensor=tensor, src=src, group=group, async_op=async_op)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/comm/torch.py", line 196, in broadcast
+    return torch.distributed.broadcast(tensor=tensor, src=src, group=group, async_op=async_op)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 1914, in broadcast
+    work = group.broadcast([tensor], opts)
+torch.distributed.DistBackendError: [3] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Connection reset by peer
+Exception raised from recvBytes at ../torch/csrc/distributed/c10d/Utils.hpp:670 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x7f003a637d87 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x589518e (0x7f00725f118e in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::string>, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x360 (0x7f00725eb9a0 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: c10d::TCPStore::doGet(std::string const&) + 0x32 (0x7f00725ebce2 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::get(std::string const&) + 0xa1 (0x7f00725ecb11 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::PrefixStore::get(std::string const&) + 0x31 (0x7f00725a1f81 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::PrefixStore::get(std::string const&) + 0x31 (0x7f00725a1f81 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: c10d::PrefixStore::get(std::string const&) + 0x31 (0x7f00725a1f81 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: c10d::PrefixStore::get(std::string const&) + 0x31 (0x7f00725a1f81 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::string const&, int) + 0xa9 (0x7f003b7dfc69 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #10: c10d::ProcessGroupNCCL::getNCCLComm(std::string const&, std::vector<c10::Device, std::allocator<c10::Device> > const&, c10d::OpType, int, bool) + 0x22b (0x7f003b7e6c5b in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #11: c10d::ProcessGroupNCCL::broadcast(std::vector<at::Tensor, std::allocator<at::Tensor> >&, c10d::BroadcastOptions const&) + 0x479 (0x7f003b7f48a9 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #12: <unknown function> + 0x5839f26 (0x7f0072595f26 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: <unknown function> + 0x5843003 (0x7f007259f003 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: <unknown function> + 0x58430b9 (0x7f007259f0b9 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: <unknown function> + 0x4e893cc (0x7f0071be53cc in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x1a08a88 (0x7f006e764a88 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x5849cba (0x7f00725a5cba in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: <unknown function> + 0x585996c (0x7f00725b596c in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: <unknown function> + 0xc961c5 (0x7f0084e501c5 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #20: <unknown function> + 0x413ea4 (0x7f00845cdea4 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #21: /root/miniconda3/envs/llaga/bin/python() [0x4fd907]
+frame #22: _PyObject_MakeTpCall + 0x25b (0x4f705b in /root/miniconda3/envs/llaga/bin/python)
+frame #23: /root/miniconda3/envs/llaga/bin/python() [0x5098bf]
+frame #24: _PyEval_EvalFrameDefault + 0x4b26 (0x4f2856 in /root/miniconda3/envs/llaga/bin/python)
+frame #25: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #26: PyObject_Call + 0xb8 (0x50a108 in /root/miniconda3/envs/llaga/bin/python)
+frame #27: _PyEval_EvalFrameDefault + 0x2b79 (0x4f08a9 in /root/miniconda3/envs/llaga/bin/python)
+frame #28: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #29: _PyEval_EvalFrameDefault + 0x13b3 (0x4ef0e3 in /root/miniconda3/envs/llaga/bin/python)
+frame #30: /root/miniconda3/envs/llaga/bin/python() [0x5095ce]
+frame #31: _PyEval_EvalFrameDefault + 0x13b3 (0x4ef0e3 in /root/miniconda3/envs/llaga/bin/python)
+frame #32: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #33: PyObject_Call + 0xb8 (0x50a108 in /root/miniconda3/envs/llaga/bin/python)
+frame #34: _PyEval_EvalFrameDefault + 0x2b79 (0x4f08a9 in /root/miniconda3/envs/llaga/bin/python)
+frame #35: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #36: _PyEval_EvalFrameDefault + 0x13b3 (0x4ef0e3 in /root/miniconda3/envs/llaga/bin/python)
+frame #37: /root/miniconda3/envs/llaga/bin/python() [0x5095ce]
+frame #38: _PyEval_EvalFrameDefault + 0x4b26 (0x4f2856 in /root/miniconda3/envs/llaga/bin/python)
+frame #39: /root/miniconda3/envs/llaga/bin/python() [0x5095ce]
+frame #40: _PyEval_EvalFrameDefault + 0x4b26 (0x4f2856 in /root/miniconda3/envs/llaga/bin/python)
+frame #41: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #42: _PyObject_FastCallDictTstate + 0x17d (0x4f645d in /root/miniconda3/envs/llaga/bin/python)
+frame #43: /root/miniconda3/envs/llaga/bin/python() [0x507188]
+frame #44: _PyObject_MakeTpCall + 0x2ab (0x4f70ab in /root/miniconda3/envs/llaga/bin/python)
+frame #45: _PyEval_EvalFrameDefault + 0x5757 (0x4f3487 in /root/miniconda3/envs/llaga/bin/python)
+frame #46: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #47: PyObject_Call + 0xb8 (0x50a108 in /root/miniconda3/envs/llaga/bin/python)
+frame #48: _PyEval_EvalFrameDefault + 0x2b79 (0x4f08a9 in /root/miniconda3/envs/llaga/bin/python)
+frame #49: /root/miniconda3/envs/llaga/bin/python() [0x509726]
+frame #50: _PyEval_EvalFrameDefault + 0x2b79 (0x4f08a9 in /root/miniconda3/envs/llaga/bin/python)
+frame #51: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #52: _PyEval_EvalFrameDefault + 0x731 (0x4ee461 in /root/miniconda3/envs/llaga/bin/python)
+frame #53: /root/miniconda3/envs/llaga/bin/python() [0x5095ce]
+frame #54: PyObject_Call + 0xb8 (0x50a108 in /root/miniconda3/envs/llaga/bin/python)
+frame #55: /root/miniconda3/envs/llaga/bin/python() [0x5c8828]
+frame #56: _PyObject_MakeTpCall + 0x25b (0x4f705b in /root/miniconda3/envs/llaga/bin/python)
+frame #57: _PyEval_EvalFrameDefault + 0x13b3 (0x4ef0e3 in /root/miniconda3/envs/llaga/bin/python)
+frame #58: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #59: _PyEval_EvalFrameDefault + 0x731 (0x4ee461 in /root/miniconda3/envs/llaga/bin/python)
+frame #60: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #61: _PyEval_EvalFrameDefault + 0x31f (0x4ee04f in /root/miniconda3/envs/llaga/bin/python)
+frame #62: /root/miniconda3/envs/llaga/bin/python() [0x5951c2]
+frame #63: PyEval_EvalCode + 0x87 (0x595107 in /root/miniconda3/envs/llaga/bin/python)
+. This may indicate a possible application crash on rank 0 or a network set up issue.
+Traceback (most recent call last):
+  File "/root/lht/LLaGA/train/train_mem.py", line 16, in <module>
+    _train()
+  File "/root/lht/LLaGA/train/train.py", line 1130, in _train
+    trainer.train()
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/transformers/trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/transformers/trainer.py", line 1656, in _inner_training_loop
+    model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/accelerate/accelerator.py", line 1255, in prepare
+    result = self._prepare_deepspeed(*args)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/accelerate/accelerator.py", line 1640, in _prepare_deepspeed
+    engine, optimizer, _, lr_scheduler = deepspeed.initialize(**kwargs)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/__init__.py", line 171, in initialize
+    engine = DeepSpeedEngine(args=args,
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 262, in __init__
+    self._configure_distributed_model(model)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1119, in _configure_distributed_model
+    self._broadcast_model()
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1042, in _broadcast_model
+    dist.broadcast(p, groups._get_broadcast_src_rank(), group=self.seq_data_parallel_group)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/comm/comm.py", line 117, in log_wrapper
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/comm/comm.py", line 224, in broadcast
+    return cdb.broadcast(tensor=tensor, src=src, group=group, async_op=async_op)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/comm/torch.py", line 196, in broadcast
+    return torch.distributed.broadcast(tensor=tensor, src=src, group=group, async_op=async_op)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/distributed/c10d_logger.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py", line 1914, in broadcast
+    work = group.broadcast([tensor], opts)
+torch.distributed.DistBackendError: [2] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Connection reset by peer
+Exception raised from recvBytes at ../torch/csrc/distributed/c10d/Utils.hpp:670 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x7f7c0e57fd87 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x589518e (0x7f7c4653918e in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::string>, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x360 (0x7f7c465339a0 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: c10d::TCPStore::doGet(std::string const&) + 0x32 (0x7f7c46533ce2 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::get(std::string const&) + 0xa1 (0x7f7c46534b11 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::PrefixStore::get(std::string const&) + 0x31 (0x7f7c464e9f81 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::PrefixStore::get(std::string const&) + 0x31 (0x7f7c464e9f81 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: c10d::PrefixStore::get(std::string const&) + 0x31 (0x7f7c464e9f81 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: c10d::PrefixStore::get(std::string const&) + 0x31 (0x7f7c464e9f81 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #9: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::string const&, int) + 0xa9 (0x7f7c0f727c69 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #10: c10d::ProcessGroupNCCL::getNCCLComm(std::string const&, std::vector<c10::Device, std::allocator<c10::Device> > const&, c10d::OpType, int, bool) + 0x22b (0x7f7c0f72ec5b in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #11: c10d::ProcessGroupNCCL::broadcast(std::vector<at::Tensor, std::allocator<at::Tensor> >&, c10d::BroadcastOptions const&) + 0x479 (0x7f7c0f73c8a9 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cuda.so)
+frame #12: <unknown function> + 0x5839f26 (0x7f7c464ddf26 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: <unknown function> + 0x5843003 (0x7f7c464e7003 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: <unknown function> + 0x58430b9 (0x7f7c464e70b9 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: <unknown function> + 0x4e893cc (0x7f7c45b2d3cc in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x1a08a88 (0x7f7c426aca88 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: <unknown function> + 0x5849cba (0x7f7c464edcba in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: <unknown function> + 0x585996c (0x7f7c464fd96c in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_cpu.so)
+frame #19: <unknown function> + 0xc961c5 (0x7f7c58d981c5 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #20: <unknown function> + 0x413ea4 (0x7f7c58515ea4 in /root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/lib/libtorch_python.so)
+frame #21: /root/miniconda3/envs/llaga/bin/python() [0x4fd907]
+frame #22: _PyObject_MakeTpCall + 0x25b (0x4f705b in /root/miniconda3/envs/llaga/bin/python)
+frame #23: /root/miniconda3/envs/llaga/bin/python() [0x5098bf]
+frame #24: _PyEval_EvalFrameDefault + 0x4b26 (0x4f2856 in /root/miniconda3/envs/llaga/bin/python)
+frame #25: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #26: PyObject_Call + 0xb8 (0x50a108 in /root/miniconda3/envs/llaga/bin/python)
+frame #27: _PyEval_EvalFrameDefault + 0x2b79 (0x4f08a9 in /root/miniconda3/envs/llaga/bin/python)
+frame #28: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #29: _PyEval_EvalFrameDefault + 0x13b3 (0x4ef0e3 in /root/miniconda3/envs/llaga/bin/python)
+frame #30: /root/miniconda3/envs/llaga/bin/python() [0x5095ce]
+frame #31: _PyEval_EvalFrameDefault + 0x13b3 (0x4ef0e3 in /root/miniconda3/envs/llaga/bin/python)
+frame #32: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #33: PyObject_Call + 0xb8 (0x50a108 in /root/miniconda3/envs/llaga/bin/python)
+frame #34: _PyEval_EvalFrameDefault + 0x2b79 (0x4f08a9 in /root/miniconda3/envs/llaga/bin/python)
+frame #35: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #36: _PyEval_EvalFrameDefault + 0x13b3 (0x4ef0e3 in /root/miniconda3/envs/llaga/bin/python)
+frame #37: /root/miniconda3/envs/llaga/bin/python() [0x5095ce]
+frame #38: _PyEval_EvalFrameDefault + 0x4b26 (0x4f2856 in /root/miniconda3/envs/llaga/bin/python)
+frame #39: /root/miniconda3/envs/llaga/bin/python() [0x5095ce]
+frame #40: _PyEval_EvalFrameDefault + 0x4b26 (0x4f2856 in /root/miniconda3/envs/llaga/bin/python)
+frame #41: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #42: _PyObject_FastCallDictTstate + 0x17d (0x4f645d in /root/miniconda3/envs/llaga/bin/python)
+frame #43: /root/miniconda3/envs/llaga/bin/python() [0x507188]
+frame #44: _PyObject_MakeTpCall + 0x2ab (0x4f70ab in /root/miniconda3/envs/llaga/bin/python)
+frame #45: _PyEval_EvalFrameDefault + 0x5757 (0x4f3487 in /root/miniconda3/envs/llaga/bin/python)
+frame #46: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #47: PyObject_Call + 0xb8 (0x50a108 in /root/miniconda3/envs/llaga/bin/python)
+frame #48: _PyEval_EvalFrameDefault + 0x2b79 (0x4f08a9 in /root/miniconda3/envs/llaga/bin/python)
+frame #49: /root/miniconda3/envs/llaga/bin/python() [0x509726]
+frame #50: _PyEval_EvalFrameDefault + 0x2b79 (0x4f08a9 in /root/miniconda3/envs/llaga/bin/python)
+frame #51: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #52: _PyEval_EvalFrameDefault + 0x731 (0x4ee461 in /root/miniconda3/envs/llaga/bin/python)
+frame #53: /root/miniconda3/envs/llaga/bin/python() [0x5095ce]
+frame #54: PyObject_Call + 0xb8 (0x50a108 in /root/miniconda3/envs/llaga/bin/python)
+frame #55: /root/miniconda3/envs/llaga/bin/python() [0x5c8828]
+frame #56: _PyObject_MakeTpCall + 0x25b (0x4f705b in /root/miniconda3/envs/llaga/bin/python)
+frame #57: _PyEval_EvalFrameDefault + 0x13b3 (0x4ef0e3 in /root/miniconda3/envs/llaga/bin/python)
+frame #58: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #59: _PyEval_EvalFrameDefault + 0x731 (0x4ee461 in /root/miniconda3/envs/llaga/bin/python)
+frame #60: _PyFunction_Vectorcall + 0x6f (0x4fdd4f in /root/miniconda3/envs/llaga/bin/python)
+frame #61: _PyEval_EvalFrameDefault + 0x31f (0x4ee04f in /root/miniconda3/envs/llaga/bin/python)
+frame #62: /root/miniconda3/envs/llaga/bin/python() [0x5951c2]
+frame #63: PyEval_EvalCode + 0x87 (0x595107 in /root/miniconda3/envs/llaga/bin/python)
+. This may indicate a possible application crash on rank 0 or a network set up issue.
+Traceback (most recent call last):
+  File "/root/lht/LLaGA/train/train_mem.py", line 16, in <module>
+    _train()
+  File "/root/lht/LLaGA/train/train.py", line 1130, in _train
+    trainer.train()
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/transformers/trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/transformers/trainer.py", line 1656, in _inner_training_loop
+    model, self.optimizer = self.accelerator.prepare(self.model, self.optimizer)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/accelerate/accelerator.py", line 1255, in prepare
+    result = self._prepare_deepspeed(*args)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/accelerate/accelerator.py", line 1640, in _prepare_deepspeed
+    engine, optimizer, _, lr_scheduler = deepspeed.initialize(**kwargs)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/__init__.py", line 171, in initialize
+    engine = DeepSpeedEngine(args=args,
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 262, in __init__
+    self._configure_distributed_model(model)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/deepspeed/runtime/engine.py", line 1077, in _configure_distributed_model
+    self.module.to(self.device)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/transformers/modeling_utils.py", line 1900, in to
+    return super().to(*args, **kwargs)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1152, in to
+    return self._apply(convert)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/nn/modules/module.py", line 802, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/nn/modules/module.py", line 802, in _apply
+    module._apply(fn)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/nn/modules/module.py", line 802, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/nn/modules/module.py", line 825, in _apply
+    param_applied = fn(param)
+  File "/root/miniconda3/envs/llaga/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1150, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 86.00 MiB. GPU 1 has a total capacity of 23.65 GiB of which 26.50 MiB is free. Process 969251 has 13.98 GiB memory in use. Process 976079 has 9.63 GiB memory in use. Of the allocated memory 9.25 GiB is allocated by PyTorch, and 1.63 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[2024-04-19 16:42:46,143] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 16772
+[2024-04-19 16:42:46,143] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 16773
+[2024-04-19 16:42:46,643] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 16774
+[2024-04-19 16:42:46,648] [INFO] [launch.py:315:sigkill_handler] Killing subprocess 16775
+[2024-04-19 16:42:46,652] [ERROR] [launch.py:321:sigkill_handler] ['/root/miniconda3/envs/llaga/bin/python', '-u', 'train/train_mem.py', '--local_rank=3', '--deepspeed', './scripts/zero2.json', '--model_name_or_path', '/root/autodl-tmp/lht/lmsys/vicuna-7b-v1.5-16k', '--version', 'v1', '--cache_dir', '../../checkpoint', '--pretrained_embedding_type', 'simteg', '--tune_mm_mlp_adapter', 'True', '--mm_use_graph_start_end', 'False', '--mm_use_graph_patch_token', 'False', '--bf16', 'True', '--output_dir', './checkpoints/pubmed-cora/llaga-vicuna-7b-simteg-2-10-linear-projector_nd', '--num_train_epochs', '1', '--per_device_train_batch_size', '4', '--per_device_eval_batch_size', '4', '--gradient_accumulation_steps', '1', '--evaluation_strategy', 'no', '--save_strategy', 'epoch', '--learning_rate', '2e-3', '--weight_decay', '0.', '--warmup_ratio', '0.03', '--lr_scheduler_type', 'cosine', '--logging_steps', '1', '--tf32', 'True', '--model_max_length', '4096', '--gradient_checkpointing', 'True', '--lazy_preprocess', 'True', '--report_to', 'wandb', '--use_hop', '2', '--sample_neighbor_size', '10', '--mm_projector_type', 'linear', '--use_task', 'nd', '--use_dataset', 'pubmed-cora', '--template', 'ND'] exits with return code = 1
